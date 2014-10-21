@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Purchaser name:
+  = @sale.purchaser_name
+%p
+  %b Item description:
+  = @sale.item_description
+%p
+  %b Item price:
+  = @sale.item_price
+%p
+  %b Purchase count:
+  = @sale.purchase_count
+%p
+  %b Merchant address:
+  = @sale.merchant_address
+%p
+  %b Merchant name:
+  = @sale.merchant_name
+
+= link_to 'Edit', edit_sale_path(@sale)
+\|
+= link_to 'Back', sales_path
