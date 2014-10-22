@@ -1,6 +1,17 @@
-# Desafio de programação 1
-A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.
+# Registrador de Vendas
+Permite a Importação de arquivos .tab, com as informações sobre a transação, a primeira linha desse arquivo deve ser o seu cabeçalho: (purchaser name, item description, item price, purchase count, merchant address, merchant name), as próximas serão os valores correspondentes a cada coluna.
 
+## Dependencias
+
+Ruby: 2.1.2
+Rails: 4
+Database: Postgresql
+
+## Utilizado
+
+Apoś instalar as dependências, basta rodar os comandos:  "bundle", para instalar as bibliotecas e "rake db:setub", para criar o banco e suas tabelas. Em seguidar levantar o servidor rails (comando: "rails server").
+
+# Desafio de Programação
 Este desafio deve ser feito por você em sua casa. Gaste o tempo que você quiser, porém normalmente você não deve precisar de mais do que algumas horas.
 
 ## Instruções de entrega do desafio
@@ -33,7 +44,7 @@ Sua aplicação web não precisa:
 1. Ter uma aparência bonita.
 
 ## Avaliação
-Seu projeto será avaliado de acordo com os seguintes critérios. 
+Seu projeto será avaliado de acordo com os seguintes critérios.
 
 1. Sua aplicação preenche os requerimentos básicos?
 1. Você documentou a maneira de configurar o ambiente e rodar sua aplicação?
