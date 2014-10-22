@@ -1,0 +1,20 @@
+= simple_form_for @sales_report do |f|
+  .panel.panel-default
+    .panel-heading.panel-title
+      Informações
+    .panel-body
+
+      .row
+        .col-xs-6
+          %b * Lista de Vendas
+          = f.file_field :sales_list, class: "file_input", label: "Lista de Vendas"
+          %span.error
+            = @sales_report.errors[:sales_list].first
+        .col-xs-6
+          = f.input :description,  as: :text, label: "Descrição", required: true
+  .form-end
+  .row
+    .col-xs-1
+      = link_to 'Cancelar', sales_reports_path
+    .col-xs-1.col-xs-offset-10.footer
+      = f.button :submit, 'Salvar' , :class => "btn btn-success", id: "submit-button"

@@ -1,0 +1,19 @@
+.col-md-5.devise-box
+  .panel.panel-default
+    .panel-heading.devise-title
+      %b Entrar
+    .panel-body
+      = simple_form_for(resource, as: resource_name ,url: session_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          .row
+            .col-xs-10.col-xs-offset-1
+              = f.input :email,label: "Email", required: true, autofocus: true, :input_html => {:class =>"devise-form-field"}
+            .col-xs-10.col-xs-offset-1
+              = f.input :password,label: "Senha", required: true, :input_html => {:class =>"devise-form-field"}
+          .row
+            .col-xs-10.col-xs-offset-1
+              = f.button :submit, "Iniciar Sessão",class: "btn btn-lg btn-primary btn-block"
+          .row
+            .col-xs-5.col-xs-offset-6.devise-links-container
+              = link_to "Registre-se", new_registration_path(resource_name), :class => "devise-form-links"

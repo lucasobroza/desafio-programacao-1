@@ -6,9 +6,30 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %nav.navbar.navbar-default
-      .container-fluid
-        .navbar-header
-        = link_to "Sair", destroy_user_session_path, :method => :delete
+    - if current_user.present?
+      %nav.navbar.navbar-default{:role => "navigation"}
+        .container-fluid
+          .navbar-header
+            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand{:href => "#"} Registro de Vendas
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.active
+                = link_to "Relatórios de Venda", sales_reports_path
+              %li
+                = link_to "Sair", destroy_user_session_path, :method => :delete
     .container
+      - flash.each do |name, msg|
+        - if msg.is_a?(String)
+          %br
+          %div.flash_notice{:class => "alert alert-#{name == "notice" ? "success" : "danger"}"}
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+            = content_tag :div, msg, :id => "flash_#{name}"
+
       = yield
+
+

@@ -21,38 +21,6 @@ class SalesController < ApplicationController
   def edit
   end
 
-  # POST /sales
-  # POST /sales.json
-  def create
-    @sale = Sale.new(sale_params)
-
-    respond_to do |format|
-      if @sale.save
-        format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
-        format.json { render :show, status: :created, location: @sale }
-      else
-        format.html { render :new }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /sales/1
-  # PATCH/PUT /sales/1.json
-  def update
-    respond_to do |format|
-      if @sale.update(sale_params)
-        format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-        format.json { render :show, status: :ok, location: @sale }
-      else
-        format.html { render :edit }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /sales/1
-  # DELETE /sales/1.json
   def destroy
     @sale.destroy
     respond_to do |format|

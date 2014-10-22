@@ -34,6 +34,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'devise'
 gem "font-awesome-rails"
+gem "paperclip", "~> 4.2"
 
 
 

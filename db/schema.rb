@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021195748) do
+ActiveRecord::Schema.define(version: 20141022101319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,12 +20,27 @@ ActiveRecord::Schema.define(version: 20141021195748) do
     t.string   "purchaser_name"
     t.string   "item_description"
     t.decimal  "item_price"
-    t.string   "purchase_count"
-    t.string   "integer"
     t.string   "merchant_address"
     t.string   "merchant_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sales_report_id"
+    t.integer  "purchase_count"
+    t.decimal  "sale_total_value"
+  end
+
+  add_index "sales", ["sales_report_id"], name: "index_sales_on_sales_report_id", using: :btree
+
+  create_table "sales_reports", force: true do |t|
+    t.date     "report_date"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "sales_list_file_name"
+    t.string   "sales_list_content_type"
+    t.integer  "sales_list_file_size"
+    t.datetime "sales_list_updated_at"
+    t.decimal  "report_total_value"
   end
 
   create_table "users", force: true do |t|

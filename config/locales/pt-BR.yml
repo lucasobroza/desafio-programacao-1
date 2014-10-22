@@ -1,0 +1,63 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+    attributes:
+      user:
+        password: "Senha"
+        password_confirmation: "Confirmação da Senha"
+        email_adress: "E-mail"
+        active: "Ativo"
+        last_sign_in_at: "Último acesso em"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        provider: "Autenticação"
+    errors:
+      format: ! '%{attribute} %{message}'
+      messages:
+        accepted: Deve ser aceito!
+        blank: Não pode ficar em branco
+        present: Não pode ficar em branco
+        confirmation: Você deve deixar este campo igual a %{attribute}.
+        empty: Não pode ficar em branco
+        equal_to: Você deve deixar este campo igual a %{count}.
+        even: Você deve deixar este campo com valor par.
+        exclusion: Não está disponível.
+        greater_than: Você deve deixar o campo com valor maior que %{count}.
+        greater_than_or_equal_to: Você deve deixar o campo com valor maior ou igual a %{count}.
+        inclusion: Não está incluído na lista.
+        invalid: Este campo não é válido.
+        less_than: Você deve deixar o campo com valor menor que %{count}.
+        less_than_or_equal_to: Você deve deixar o campo com valor menor ou igual a %{count}.
+        not_a_number: Você deve deixar o campo com valor númerico.
+        not_an_integer: Você deve deixar o campo com valor númerico inteiro.
+        odd: Você deve deixar este campo com valor ímpar.
+        record_invalid: ! 'A validação falhou: %{errors}.'
+        restrict_dependent_destroy:
+          one: "Não é possível excluir o registro pois existe um %{record} dependente."
+          many: "Não é possível excluir o registro pois existem %{record} dependentes."
+        taken: já está em uso
+        too_long: ! 'Deve ter no máximo: %{count} caracteres'
+        too_short: ! 'Deve ter no mínimo: %{count} caracteres'
+        wrong_length: Deve ter o tamanho igual a %{count} caracteres.
+      template:
+        body: ! 'Por favor, verifique o(s) seguinte(s) campo(s):'
+        header:
+          one: ! 'Não foi possível gravar %{model}: 1 erro.'
+          other: ! 'Não foi possível gravar %{model}: %{count} erros.'
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u %n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false

@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+  */
+
+@import "bootstrap";
+@import "bootstrap-sprockets";
+
+/*a{
+  color: #428bca;
+}
+
+a:visited{
+  color: #428bca;
+}
+
+a:hover{
+  background: none;
+  text-decoration: underline;
+}*/
+
+.panel-title{
+  font-weight: bold;
+}
+
+.file_input{
+  margin-top: 5px;
+}
+
+.devise-box{
+  float:none !important;
+  margin: 80px auto;
+}
+.devise-title{
+  text-align: center;
+  font-size: 23px;
+}
+.devise-form-field{
+  font-size: 20px;
+  height:40px;
+  text-align: left;
+}
+.devise-links-container{
+  text-align: right;
+  padding-top:10px;
+}
+
+.error{
+  color:#a94442
+}
+
+.wider-header{
+  width: 600px;
+}
+
+div.form-title{
+  h3{
+    float: left;
+    display: inline-block;
+  }
+
+  a.btn{
+    float: right;
+    margin-top: 16px;
+    color: white;
+  }
+  div{
+    display:inline-block;
+    width:100%;
+    border-bottom-width: 1px;
+    border-bottom-color: #ccc;
+    margin-bottom:15px;
+    padding-bottom:5px;
+  }
+}
+
+a.btn-danger{
+  color: white;
+  text-align: center;
+}
+
+.object-value{
+  margin-left: 19px;
+  font-size: 18px;
+}
+
+.object-title{
+  margin-top: 25px;
+  font-size: 23px;
+}

@@ -1,0 +1,28 @@
+.form-title
+  %div
+    %h3
+      Relatórios de Vendas
+    = link_to "Novo Relatório", new_sales_report_path, :class=>"btn btn-success", :method=> :get, :type=>"button"
+
+%table.table.table-striped
+  %tr
+    %th #
+    %th.wider-header Descrição
+    %th Quantidade de Vendas
+    %th Valor Total de Vendas
+    %th Excluir
+
+  - @sales_reports.each_with_index do |sales_report, index|
+    %tr
+      %td= index +1
+      %td= link_to sales_report.description, sales_report_path(sales_report)
+      %td= sales_report.sales.size
+      %td= number_to_currency(sales_report.total_of_sales)
+      %td
+        = link_to sales_report , method: :delete, data: { :confirm => "Deseja excluir o relatório?"  }, class: "btn btn-danger", title: "Excluir", 'data-toggle' => "tooltip" do
+          %i.fa.fa-lg.fa-trash-o
+
+
+
+
+
