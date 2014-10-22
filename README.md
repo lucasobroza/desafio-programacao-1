@@ -3,9 +3,9 @@ Permite a Importação de arquivos .tab, com as informações sobre as transaç�
 
 ## Dependencias
 
-Ruby: 2.1.2.
-Rails: 4.
-Database: Postgresql.
+Ruby: 2.1.2.   
+Rails: 4.   
+Database: Postgresql.   
 
 ## Como Usar:
 
