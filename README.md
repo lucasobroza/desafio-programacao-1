@@ -1,13 +1,13 @@
 # Registrador de Vendas
-Permite a Importação de arquivos .tab, com as informações sobre a transação, a primeira linha desse arquivo deve ser o seu cabeçalho: (purchaser name, item description, item price, purchase count, merchant address, merchant name), as próximas serão os valores correspondentes a cada coluna.
+Permite a Importação de arquivos .tab, com as informações sobre as transações, a primeira linha desse arquivo deve ser o seu cabeçalho: (purchaser name, item description, item price, purchase count, merchant address, merchant name), as próximas serão os valores correspondentes a cada coluna, para cada transação.
 
 ## Dependencias
 
-Ruby: 2.1.2
-Rails: 4
-Database: Postgresql
+Ruby: 2.1.2.
+Rails: 4.
+Database: Postgresql.
 
-## Utilizado
+## Como Usar:
 
 Apoś instalar as dependências, basta rodar os comandos:  "bundle", para instalar as bibliotecas e "rake db:setub", para criar o banco e suas tabelas. Em seguidar levantar o servidor rails (comando: "rails server").
 
